@@ -1,0 +1,4 @@
+module swiftGLFW {
+    header "include/shim.h"
+    export *
+}
