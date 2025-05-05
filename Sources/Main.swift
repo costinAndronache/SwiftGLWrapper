@@ -24,14 +24,13 @@ struct Main {
         }
 
         glfwMakeContextCurrent(window)
-        glViewport(x: 0, y: 0, width: width, height: height)
+        GL.glViewport(x: 0, y: 0, width: width, height: height)
 
-        while glfwWindowShouldClose(window) == GL_FALSE
-        {
+        while glfwWindowShouldClose(window) == GL_FALSE {
             glfwPollEvents()
 
-            glClearColor(red: 0.2, green: 0.3, blue: 0.3, alpha: 1.0)
-            glClear(GL_COLOR_BUFFER_BIT)
+            GL.glClearColor(red: 0.2, green: 0.3, blue: 0.3, alpha: 1.0)
+            GL.glClear(GL_COLOR_BUFFER_BIT)
     
             glfwSwapBuffers(window)
         }
