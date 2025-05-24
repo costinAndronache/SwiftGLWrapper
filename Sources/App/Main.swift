@@ -5,6 +5,8 @@ import swiftGLFW
 import SGLOpenGL
 import WinSDK
 
+public let GL: any GLWrapper.Type = SGLOpenGLWrapper.self
+
 @main
 struct Main {
     static func main() {
