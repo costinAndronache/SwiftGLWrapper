@@ -5,6 +5,8 @@ import swiftGLFW
 import SGLOpenGL
 import WinSDK
 
+public let GL: any GLWrapper.Type = SGLOpenGLWrapper.self
+
 @main
 struct Main {
     static func main() {
@@ -31,7 +33,7 @@ struct Main {
 
         do {
 
-            let mesh = try loadBasicTriangle(SGLOpenGLWrapper.self)
+            let mesh = try loadTexturedMesh(SGLOpenGLWrapper.self)
 
             while glfwWindowShouldClose(window) == GL_FALSE {
                 glfwPollEvents()

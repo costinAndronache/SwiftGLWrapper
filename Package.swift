@@ -7,6 +7,7 @@ let package = Package(
     name: "swiftGLRendering",
     dependencies: [
         .package(path: "./swiftGLFW"),
+        .package(path: "./swiftSTBImage"),
         .package(url: "https://github.com/costinAndronache/SGLOpenGL.git", exact: "3.1.0"),
         .package(url: "https://github.com/recp/cglm.git", exact: "0.9.6")
     ],
@@ -18,7 +19,8 @@ let package = Package(
             dependencies: [
                 .product(name: "swiftGLFW", package: "swiftGLFW"),
                 .product(name: "SGLOpenGL", package: "SGLOpenGL"),
-                .product(name: "cglm", package: "cglm")
+                .product(name: "cglm", package: "cglm"),
+                .product(name: "swiftSTBImage", package: "swiftSTBImage")
             ],
             swiftSettings: [
                 .interoperabilityMode(.C)
